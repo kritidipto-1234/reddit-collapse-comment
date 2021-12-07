@@ -1,0 +1,51 @@
+.Comment {
+    .authorData {
+        display: flex;
+        // border: 1px solid blue;
+        justify-content: start;
+        background-color: rgb(236, 236, 200);
+        padding: 10px;
+        border-bottom: 1px solid green;
+        align-items: center;
+        img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 35px;
+            height: 35px;
+            border: 1px solid black;
+        }
+        button {
+            margin-right: 10px;
+        }
+    }
+
+    .content {
+        &.collapsed {
+            display: none;
+        }
+        position: relative;
+        .collapser {
+            position: absolute;
+            left: 0px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            content: "";
+            cursor: pointer;
+            background-color: green;
+            &:hover {
+                width: 6px;
+                background-color: darkgreen;
+            }
+        }
+
+        .text {
+            word-break: break-all;
+            padding: 5px;
+        }
+        padding-left: 20px;
+    }
+
+    .replies {
+    }
+}
